@@ -2,6 +2,10 @@
 
 Extracts search results from a library discovery system via its REST API. Outputs structured JSON with metadata for each record (title, authors, DOI, PMID, abstract, journal, subjects, etc.).
 
+> Be respectful!
+>
+> This project is for testing and research purposes.  Be respectful of robot.txt and any other restrictions.
+
 ## Setup
 
 ```bash
