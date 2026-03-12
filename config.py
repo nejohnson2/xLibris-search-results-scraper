@@ -1,12 +1,16 @@
 """Configuration for the Primo search results scraper."""
 
-# Rate limiting
-MIN_DELAY = 3  # seconds
+# Rate limiting — delays between API calls
+MIN_DELAY = 3  # seconds (between pagination calls within a query)
 MAX_DELAY = 5  # seconds
+URL_DELAY = 2  # seconds between different URLs (added to MIN/MAX_DELAY jitter)
+
+# Checkpoint — write intermediate results every N URLs
+CHECKPOINT_INTERVAL = 100
 
 # API settings
 BATCH_SIZE = 50  # results per API request (max supported by Primo)
-DEFAULT_MAX_RECORDS = None  # None = no limit, scrape all results
+DEFAULT_MAX_RECORDS = 20  # max records to fetch per query
 
 # Output
 OUTPUT_DIR = "output"
